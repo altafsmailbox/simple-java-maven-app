@@ -4,6 +4,6 @@ node{
   }
   stage('Compile package'){
     def mvnHome = tool name: 'maven', type: 'maven'
-    sh "${mvnHome}/bin/mvn package"
+    sh "${mvnHome}/bin/mvn -B -DskipTests clean package"
   }
 }
